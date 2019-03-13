@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Current progress
+
+Start of project. Initialization of App has been done, but that's it for now. Experimenting will start!
+
 ## Available Scripts
 
 In the project directory, you can run:
