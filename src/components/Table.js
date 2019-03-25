@@ -18,7 +18,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from '@material-ui/icons/Delete';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import { lighten } from '@material-ui/core/styles/colorManipulator';
-import Button from '@material-ui/core/Button';
 import CustomButton from './CustomButton';
 
 let counter = 0;
