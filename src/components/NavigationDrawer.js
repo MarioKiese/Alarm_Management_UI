@@ -40,14 +40,16 @@ class SwipeableTemporaryDrawer extends React.Component {
   render() {
     const { classes } = this.props;
 
+    const loginColor = this.props.login ? "secondary" : "primary";
+
     const userArea = (
       <ListItem>
         <ListItemIcon>
           <Avatar alt="Avatar" src={Default_Avatar} />
         </ListItemIcon>
         <ListItemText primary="Mr. Developer" />
-        <IconButton>
-          <LoginIcon color="secondary" />
+        <IconButton onClick={() => this.props.onToggleLogin()}>
+          <LoginIcon color={loginColor} />
         </IconButton>
       </ListItem>
     );

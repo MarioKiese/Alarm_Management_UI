@@ -20,13 +20,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navDrawer: false
+      navDrawer: false,
+      login: true
     };
   }
 
   handleOpenDrawer = open => {
     this.setState({
       navDrawer: open
+    });
+  };
+
+  handleLogin = () => {
+    this.setState({
+      login: !this.state.login
     });
   };
 
@@ -37,6 +44,8 @@ class App extends Component {
         <Table />
         <NavigationDrawer
           navDrawer={this.state.navDrawer}
+          onToggleLogin={this.handleLogin}
+          login={this.state.login}
           onOpenDrawer={this.handleOpenDrawer}
         />
       </MuiThemeProvider>
