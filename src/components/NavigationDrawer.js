@@ -37,6 +37,10 @@ class SwipeableTemporaryDrawer extends React.Component {
     }
   }
 
+  handleToggleDrawerClick = () => {
+    this.props.onOpenDrawer(false);
+  };
+
   render() {
     const { classes } = this.props;
 
@@ -48,7 +52,7 @@ class SwipeableTemporaryDrawer extends React.Component {
           <Avatar alt="Avatar" src={Default_Avatar} />
         </ListItemIcon>
         <ListItemText primary="Mr. Developer" />
-        <IconButton onClick={() => this.props.onToggleLogin()}>
+        <IconButton onClick={this.props.onToggleLogin}>
           <LoginIcon color={loginColor} />
         </IconButton>
       </ListItem>
@@ -84,14 +88,14 @@ class SwipeableTemporaryDrawer extends React.Component {
     return (
       <SwipeableDrawer
         open={this.props.navDrawer}
-        onClose={() => this.props.onOpenDrawer(false)}
-        onOpen={() => this.props.onOpenDrawer(true)}
+        onClose={this.handleToggleDrawerClick}
+        onOpen={this.handleToggleDrawerClick}
       >
         <div
           tabIndex={0}
           role="button"
-          onClick={() => this.props.onOpenDrawer(false)}
-          onKeyDown={() => this.props.onOpenDrawer(false)}
+          onClick={this.handleToggleDrawerClick}
+          onKeyDown={this.handleToggleDrawerClick}
         >
           {userArea}
           {sideList}
